@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subcats",
+  "info": {
+    "singularName": "subcat",
+    "pluralName": "subcats",
+    "displayName": "subcat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "subcats"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "subcats"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
